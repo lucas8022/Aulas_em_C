@@ -29,8 +29,7 @@ void PessoaJuridica::setNomeFantasia(const string & name_fant_){
     name_fant = name_fant_;
 }
 
-void PessoaJuridica::setCNPJ(const string & cnpj_){
-
+void PessoaJuridica::setCNPJ(const string & cnpj_) {
 }
 
 

@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class Funcionario: public Pessoa {
+class Funcionario: public PessoaFisica {
 
 public:
 

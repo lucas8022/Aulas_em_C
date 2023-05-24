@@ -52,6 +52,7 @@ bool Funcionario::setSalarioBase (float salario_base_){
         return true;
     }
     else {
+        cout << "ERRO: SALARIO BASE INVALIDO";
         return false;
     }
 }
@@ -63,7 +64,6 @@ bool Funcionario::setCargaHoraria(int carga_horaria_){
     else {
         return false;
     }
-
 }
 
 bool Funcionario::setHorasTrabalhadas(float horas_trabalhadas_){

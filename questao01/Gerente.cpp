@@ -32,5 +32,5 @@ int Gerente::getQtdFunc(){
 }
 
 string Gerente::getPassword(){
-    return qtd_horas;
+    return password;
 }

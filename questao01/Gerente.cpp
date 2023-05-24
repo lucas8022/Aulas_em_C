@@ -1,14 +1,18 @@
 #include "Gerente.hpp"
 #include "Funcionario.hpp"
 
-Gerente::Gerente() : Gerente("USUARIO SEM CADASTRO") {}
+Gerente::Gerente(){}
 
-Gerente::Gerente(string password_) {
-    setPassword(password);
+Gerente::Gerente(const Gerente & ger) {
+    nome = ger.nome;
+    setCPF(ger.getCPF());
+    setSalarioBase(ger.getSalarioBase());
+    setCargaHoraria(ger.getCargaHoraria());
 }
 
 void Gerente::setQtdHoras(int qtd_horas_){
-    qtd_horas = qtd_horas_;
+    if (qtd_horas_ >= getCargaHoraria()){
+    }
 }
 
 void Gerente::setQtdFunc(int qtd_func_){
@@ -19,8 +23,14 @@ void Gerente::setPassword(string password_){
     password = password_;
 } 
 
-bool Gerente::alterarSenha(string & password_, string NewPass){
-    
+bool Gerente::alterarSenha(string old_pass, string NewPass){
+    if (password == old_pass && password == "") {
+        password = NewPass;
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 int Gerente::getQtdHoras(){
@@ -29,8 +39,4 @@ int Gerente::getQtdHoras(){
 
 int Gerente::getQtdFunc(){
     return qtd_func;
-}
-
-string Gerente::getPassword(){
-    return password;
 }

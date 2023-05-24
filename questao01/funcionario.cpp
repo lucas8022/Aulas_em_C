@@ -11,6 +11,7 @@ Funcionario::Funcionario(const Funcionario & func){
     carga_horaria = func.carga_horaria;
     horas_trabalhadas = func.horas_trabalhadas;
 }
+
 Funcionario::Funcionario(const string & nm, const string & cpf, int mat, float sb, int ch, float ht) : PessoaFisica(nome, cpf){
     setMatricula(mat);
     setSalarioBase(sb);
@@ -21,15 +22,19 @@ Funcionario::Funcionario(const string & nm, const string & cpf, int mat, float s
 int Funcionario::getMatricula() const{
     return matricula;
 }
+
 float Funcionario::getSalarioBase ()const{
     return salario_base;
 }
+
 int Funcionario::getCargaHoraria() const{
     return carga_horaria;
 }
+
 float Funcionario::getHorasTrabalhadas() const {
     return horas_trabalhadas;
 }
+
 float Funcionario::calculaSalarioBruto() {
     return (salario_base * horas_trabalhadas) / carga_horaria + calculaBonus();
 }
@@ -70,7 +75,6 @@ bool Funcionario::setCargaHoraria(int carga_horaria_){
 }
 
 bool Funcionario::setHorasTrabalhadas(float horas_trabalhadas_){
-
     if (horas_trabalhadas_ > 0 && horas_trabalhadas_ <= carga_horaria){
         horas_trabalhadas = horas_trabalhadas_;
         return true;

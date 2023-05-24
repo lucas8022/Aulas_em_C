@@ -36,11 +36,24 @@ float Funcionario::calculaSalarioBruto() {
 }
 
 bool Funcionario::setMatricula(int matricula_){
-
+    if (matricula_ > 0){
+        matricula = matricula_;
+        return true;
+    }
+    else {
+        cout << "ERRO: Nº DA MATRICULA INDISPONIVEL";
+        return false;
+    }
 }
 
 bool Funcionario::setSalarioBase (float salario_base_){
-
+    if (salario_base_ > 0){
+        salario_base = salario_base_;
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 bool Funcionario::setCargaHoraria(int carga_horaria_){
     if (carga_horaria_ > 0){

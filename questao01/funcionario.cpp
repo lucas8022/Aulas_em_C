@@ -3,7 +3,6 @@
 
 Funcionario::Funcionario() : Funcionario("", "", 0, 0, 0, 0) {}
 
-
 Funcionario::Funcionario(const Funcionario & func){
     nome = func.nome;
     setCPF(func.getCPF());
@@ -33,6 +32,10 @@ float Funcionario::getHorasTrabalhadas() const {
 }
 float Funcionario::calculaSalarioBruto() {
     return (salario_base * horas_trabalhadas) / carga_horaria + calculaBonus();
+}
+
+float Funcionario::calculaBonus(){
+    return 0.0;
 }
 
 bool Funcionario::setMatricula(int matricula_){
@@ -77,6 +80,3 @@ bool Funcionario::setHorasTrabalhadas(float horas_trabalhadas_){
     }
 }
 
-float Funcionario::calculaBonus(){
-    return 0;
-}

@@ -1,7 +1,12 @@
 #ifndef _FUNCIONARIO_HPP_
 #define _FUNCIONARIO_HPP_
+#include "Pessoa.hpp"
+#include "PessoaFisica.hpp"
+#include <iostream>
 
-class Funcionario {
+using namespace std;
+
+class Funcionario: public Pessoa {
 
 public:
 
@@ -20,10 +25,8 @@ public:
     bool setCargaHoraria(int carga_horaria_);
     bool setHorasTrabalhadas(float horas_trabalhadas_);
 
-
 protected:
     float calculaBonus();
-
 
 private:
     int matricula;
@@ -31,7 +34,6 @@ private:
     int carga_horaria;
     float horas_trabalhadas;
 
-}
-
+};
 
 #endif

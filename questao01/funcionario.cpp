@@ -1,3 +1,5 @@
+#include "funcionario.hpp"
+#include "PessoaJuridica.hpp"
 
 Funcionario::Funcionario() : Funcionario("", "", 0, 0, 0, 0) {}
 
@@ -10,8 +12,7 @@ Funcionario::Funcionario(const Funcionario & func){
     carga_horaria = func.carga_horaria;
     horas_trabalhadas = func.horas_trabalhadas;
 }
-Funcionario::Funcionario(const string & nm, const string & cpf, int mat, float sb, int ch, float ht) : PessoaFisica(nm, cpf){
-
+Funcionario::Funcionario(const string & nm, const string & cpf, int mat, float sb, int ch, float ht) : PessoaFisica(nome, cpf){
     setMatricula(mat);
     setSalarioBase(sb);
     setCargaHoraria(ch);
@@ -30,30 +31,33 @@ int Funcionario::getCargaHoraria() const{
 float Funcionario::getHorasTrabalhadas() const {
     return horas_trabalhadas;
 }
-float Funcionario::calculaSalarioBruto() const {
+float Funcionario::calculaSalarioBruto() {
     return (salario_base * horas_trabalhadas) / carga_horaria + calculaBonus();
 }
 
+bool Funcionario::setMatricula(int matricula_){
 
-bool Funcionario::setMatricula(int matricula_) const{
-    
 }
-bool Funcionario::setSalarioBase (float salario_base_)const;
-bool Funcionario::setCargaHoraria(int carga_horaria_) const{
-    if (ch > 0){
-        carga_horaria = ch;
+
+bool Funcionario::setSalarioBase (float salario_base_){
+
+}
+bool Funcionario::setCargaHoraria(int carga_horaria_){
+    if (carga_horaria_ > 0){
+        carga_horaria = carga_horaria_;
         return true;
     }
     else {
-        false
+        return false;
     }
 
 }
-bool Funcionario::setHorasTrabalhadas(float horas_trabalhadas_) const{
 
-    if (ht > 0 && <= carga_horaria){
-        horas_trabalhadas = ht;
-        return true
+bool Funcionario::setHorasTrabalhadas(float horas_trabalhadas_){
+
+    if (horas_trabalhadas_ > 0 && horas_trabalhadas_ <= carga_horaria){
+        horas_trabalhadas = horas_trabalhadas_;
+        return true;
     }
     else {
         return false;

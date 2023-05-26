@@ -24,7 +24,7 @@ void Gerente::setPassword(string password_){
 } 
 
 bool Gerente::alterarSenha(string old_pass, string NewPass){
-    if (password == old_pass && password == "") {
+    if (password == old_pass || password == "") {
         password = NewPass;
         return true;
     }

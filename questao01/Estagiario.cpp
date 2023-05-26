@@ -24,8 +24,8 @@ bool Estagiario::setTempoRestante(float tempo_restante_){
 }
 }
 
-bool Estagiario::setTipoestagiario(TipoEstagiario tipo){
-   
+void Estagiario::setTipoestagiario(TipoEstagiario tipo){
+   tipo_estagiario = tipo;
 }
 
 float Estagiario::getTempoRestante() const{

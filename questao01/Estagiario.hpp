@@ -14,7 +14,7 @@ class Estagiario : public Funcionario {
         Estagiario(const string & nm, const string & cpf, int mat, float sb, int ch, float ht, float tempo, TipoEstagiario tipo);
 
         bool setTempoRestante(float tempo_restante_);
-        bool setTipoestagiario(TipoEstagiario tipo);
+        void setTipoestagiario(TipoEstagiario tipo);
 
         float getTempoRestante() const;
         TipoEstagiario getTipoEstagiario() const;

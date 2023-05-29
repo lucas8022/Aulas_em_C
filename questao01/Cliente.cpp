@@ -1,6 +1,5 @@
 #include "Cliente.hpp"
 
-
 Cliente::Cliente() : Cliente("", "", "", ""){}
 
 Cliente::Cliente(const Cliente & cliente){

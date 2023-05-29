@@ -1,6 +1,5 @@
-//#include "Pessoa.hpp"
-//#include "PessoaFisica.hpp"
-//#include "PessoaJuridica.hpp"
+#ifndef _GERENTE_HPP_
+#define _GERENTE_HPP_
 #include "Funcionario.hpp"
 
 class Gerente: public Funcionario {
@@ -24,3 +23,5 @@ public:
 protected:
 
 };
+
+#endif

@@ -3,8 +3,6 @@
 #include "PessoaFisica.hpp"
 #include <iostream>
 
-
-
 class Cliente : public PessoaFisica {
 
 public:
@@ -18,13 +16,10 @@ public:
     void setTelefone(const string & telefone_);
     void setEndereco(const string & endereco_);
 
-
 private:
     string telefone;
     string endereco;
 
-
 };
-
 
 #endif

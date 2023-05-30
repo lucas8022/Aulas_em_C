@@ -4,7 +4,7 @@
 Gerente::Gerente()
     : Gerente("","",0,0,0,0,0,0,"") 
     {
-
+        
     }
 
 Gerente::Gerente(const Gerente & ger) {

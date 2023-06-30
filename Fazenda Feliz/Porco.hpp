@@ -7,10 +7,13 @@ class Porco : public Animal{
 
     public:
     
-    Porco(int idade, const string &sexo, float peso, float valor_kg);
+    Porco(int idade, const string &sexo, float peso);
+    void setPreco_Kg(float kg);
+    float getPreco_Kg();
     virtual void som() const; 
     virtual void comer();
     virtual void mover();
+    virtual float preco() const;
     virtual void imprimir() const;
 
     static int getNumPorco();
@@ -18,6 +21,9 @@ class Porco : public Animal{
     private:
     float peso_porco = getPeso();
     static int numPorco;
+    float preco_kg;
+
+    ~Porco();
 };
 
 #endif

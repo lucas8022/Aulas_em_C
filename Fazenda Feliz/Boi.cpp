@@ -3,8 +3,8 @@
 int Boi::numBoi = 0;
 
 
-Boi::Boi(int idade, const string &sexo, float peso, float valor_kg)
-: Animal(idade, sexo, peso, valor_kg)
+Boi::Boi(int idade, const string &sexo, float peso)
+: Animal(idade, sexo, peso)
 {
     numBoi++; // atributo estatico 
 }
@@ -23,13 +23,29 @@ Boi::Boi(int idade, const string &sexo, float peso, float valor_kg)
     peso_boi -= peso_boi * 0.004;
     setPeso(peso_boi);
 }
+/*virtual*/ float Boi::preco() const {
+    return getPeso() * preco_kg;
+}
 /*virtual*/ void Boi::imprimir() const{
     cout << "*********************************" << endl;
     cout << "Tipo de animal: Boi" << endl;
     Animal::imprimir();
-    cout << "Preco da carne: " << preco() << endl;
     cout << "*********************************" << endl;
 }
 /*static*/ int Boi::getNumBoi(){
     return numBoi;
+}
+void Boi::setPreco_Kg(float kg){
+    if (kg > 0){
+        preco_kg = kg;
+    } else {
+        cout << "ERRO: PRECO INVALIDO" << endl;
+        exit(1);
+    }
+}
+float Boi::getPreco_Kg(){
+    return preco_kg;
+}
+Boi::~Boi(){
+    numBoi--;
 }

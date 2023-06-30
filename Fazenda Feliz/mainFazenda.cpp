@@ -7,6 +7,7 @@
 #include <vector>
 #include <iostream>
 
+
 int main(){
 
     Fazenda fazenda("Fazenda do Patoense", 300000, "Patos", "PB");
@@ -39,19 +40,7 @@ int main(){
     //Pa1.imprimir();
     //G1.imprimir();
 
-/*
-    vector <Animal *> animais(9);
-    animais[0] = &B1;
-    animais[1] = &P1;
-    animais[2] = &Pa1;
-    animais[3] = &G1;
-    animais[4] = &G2;
-    animais[5] = &B2;
-    animais[6] = &P2;
-    animais[7] = &Pa2;
-    animais[8] = &G3;
-*/
-/*
+
     fazenda.AddAnimal(&B1);
     fazenda.AddAnimal(&B2);
     fazenda.AddAnimal(&P1);
@@ -62,7 +51,7 @@ int main(){
     fazenda.AddAnimal(&G2);
     fazenda.AddAnimal(&G3);
     
-*/
+
     fazenda.imprimir();
     return 0;
 }

@@ -7,7 +7,6 @@
 #include <vector>
 #include <iostream>
 
-
 int main(){
 
     Fazenda fazenda("Fazenda do Patoense", 300000, "Patos", "PB");

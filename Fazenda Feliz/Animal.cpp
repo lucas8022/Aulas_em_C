@@ -9,7 +9,7 @@ Animal::Animal(int idade, const string &sexo, float peso, float valor_kg)
 void Animal::setIdade(int i){
     if (i > 0){
         idade = i;
-    } else {
+    } else { 
         cout << "ERRO: IDADE INVALIDA" << endl;
         exit(1);
     }

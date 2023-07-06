@@ -34,9 +34,6 @@ class Animal {
     string sexo;
     float peso;
 
-    virtual 
-
-
 };
 
 #endif 

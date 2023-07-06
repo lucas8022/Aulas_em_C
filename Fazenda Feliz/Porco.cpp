@@ -47,7 +47,3 @@ void Porco::setPreco_Kg(float kg){
 float Porco::getPreco_Kg(){
     return preco_kg;
 }
-
-Porco::~Porco(){
-    numPorco--;
-}

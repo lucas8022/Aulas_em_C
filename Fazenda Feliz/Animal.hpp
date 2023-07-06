@@ -9,7 +9,7 @@ using namespace std;
 class Animal {
 
     public:
-    Animal(int idade,  const string &sexo, float peso);
+    Animal(int idade,  const string &sexo, float peso); // construtor animal
 
     void setIdade(int i); // set idade
     void setSexo(string s); // set sexo
@@ -26,10 +26,17 @@ class Animal {
 
     virtual void imprimir() const; 
 
-    private: // tudo em protected pois é a classe abstrada 
+    // tudo virtual pq cada animal vai ter seu metodo som, mover, comer, preco e imprimir
+
+
+    private: // ta private mas podia ser protected
     int idade;
     string sexo;
     float peso;
+
+    virtual 
+
+
 };
 
 #endif 

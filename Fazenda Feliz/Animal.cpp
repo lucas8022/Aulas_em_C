@@ -1,11 +1,10 @@
 #include "Animal.hpp"
 
 Animal::Animal(int idade, const string &sexo, float peso)
-: sexo(sexo)
+: sexo(sexo) // como sexo é string pode ir direto 
 {
-    setIdade(idade);
+    setIdade(idade); // já idade e peso precisam ser verificados
     setPeso(peso);
-        // corpo vazio
 } // fim do construtor Animal
 
 void Animal::setIdade(int i){
@@ -42,4 +41,5 @@ float Animal::getPeso() const{
     cout << "Idade: " << idade << endl;
     cout << "Sexo: " << sexo << endl;
     cout << "Peso: " << peso << endl;
-} 
+} // criei que vai ser utilizado para diminuir codigo no futuro
+

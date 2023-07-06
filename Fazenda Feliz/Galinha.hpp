@@ -20,9 +20,9 @@ class Galinha : public Animal{
     private:
     float peso_galinha = getPeso();
     static int numGalinha;
-    float preco_kg;
+    float preco_kg = 20;
 
-    ~Galinha();
+    //~Galinha();
 };
 
 #endif

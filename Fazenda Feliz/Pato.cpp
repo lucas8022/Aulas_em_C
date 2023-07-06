@@ -29,6 +29,7 @@ Pato::Pato(int idade, const string &sexo, float peso)
     cout << "*********************************" << endl;
     cout << "Tipo de animal: Pato" << endl;
     Animal::imprimir();
+    cout << "Preco da carne: " << preco() << endl;
     cout << "*********************************" << endl;
 }
 
@@ -45,8 +46,4 @@ void Pato::setPreco_Kg(float kg){
 }
 float Pato::getPreco_Kg(){
     return preco_kg;
-}
-
-Pato::~Pato(){
-    numPato--;
 }

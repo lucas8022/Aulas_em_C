@@ -29,6 +29,7 @@ Galinha::Galinha(int idade, const string &sexo, float peso)
     cout << "*********************************" << endl;
     cout << "Tipo de animal: Galinha" << endl;
     Animal::imprimir();
+    cout << "Preco da carne: " << preco() << endl;
     cout << "*********************************" << endl;
 }
 /*static*/ int Galinha::getNumGalinha(){
@@ -44,7 +45,4 @@ void Galinha::setPreco_Kg(float kg){
 }
 float Galinha::getPreco_Kg(){
     return preco_kg;
-}
-Galinha::~Galinha(){
-    numGalinha--;
 }

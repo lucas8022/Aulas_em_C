@@ -15,37 +15,37 @@ using namespace std;
 class Fazenda {
     private:
     string nome;
-    float dimensao;
+    float dimensao; // atributos padroes da fazenda
     string cidade;
     string estado;
-    vector <Animal *> Animais;
+    vector <Animal *> Animais; // cria o vector de animais já em fazenda hpp
 
     public:
     Fazenda();
-    Fazenda(const string & nome, float dimensao, const string &cidade, const string &estado);
+    Fazenda(const string & nome, float dimensao, const string &cidade, const string &estado); // construtores
     void setNome(string n);
-    void setDimensao(float di);
+    void setDimensao(float di); // set dos atributos padrões 
     void setCidade(string ci);
     void setEstado(string es);
 
     string getNome();
-    float getDimensao();
+    float getDimensao(); // get dos atributos padrões
     string getCidade();
     string getEstado();
 
-    void AddAnimal(Animal * nimal);
-    void RemoveAnimal(int pos);
-    int getN_Animais();
-    //float calculaPrecoTotal();
-    //float calculaPrecoAnimal(int pos);
+    void AddAnimal(Animal * nimal); // metodo que add um animal no vector 
+    void RemoveAnimal(int pos); // remove uma posição do vector 
+    int getN_Animais(); // retorna o tamanho do vector
+    float calculaPrecoTotal(); // calcula o preco total 
+    float calculaPrecoAnimal(int pos); // calcula o preco de uma certa posição
 
     int NumPorco();
-    int NumBoi();
-    int NumPato();
-    int NumGalinha();
+    int NumBoi(); // aqui retorna a quantidade de cada animal especifico 
+    int NumPato(); // antigamente retornava o atributo static de cada função, mas agora 
+    int NumGalinha(); // usa o operador dynamic_cast 
 
-    void imprimir();
-    //~Fazenda();
+    void imprimir(); // imprimi 
+    ~Fazenda(); // destrutor
 };
 
 #endif

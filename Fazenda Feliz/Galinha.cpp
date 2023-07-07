@@ -11,6 +11,7 @@ Galinha::Galinha(int idade, const string &sexo, float peso)
     cout << "Galinha disse: cocó, cocorocó" << endl;
 } 
 /*virtual*/ void Galinha::comer(){
+    cout << "Galinha alimentou-se" << endl;
     peso_galinha += 0.2;
     setPeso(peso_galinha);
     if (peso_galinha > 1.8){
@@ -19,6 +20,7 @@ Galinha::Galinha(int idade, const string &sexo, float peso)
     }
 }
 /*virtual*/ void Galinha::mover(){
+    cout << "Galinha moveu-se" << endl; 
     peso_galinha -= peso_galinha * 0.001;
     setPeso(peso_galinha);
 }
@@ -29,7 +31,7 @@ Galinha::Galinha(int idade, const string &sexo, float peso)
     cout << "*********************************" << endl;
     cout << "Tipo de animal: Galinha" << endl;
     Animal::imprimir();
-    cout << "Preco da carne: " << preco() << endl;
+    cout << "Preco da carne: R$ " << preco() << endl;
     cout << "*********************************" << endl;
 }
 /*static*/ int Galinha::getNumGalinha(){

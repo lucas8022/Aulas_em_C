@@ -45,12 +45,12 @@ void Fazenda::AddAnimal(Animal * nimal){
 }
 void Fazenda::RemoveAnimal(int pos){
     if (pos >= 0 && pos < Animais.size()){
-        delete Animais[pos]; // delete o animal da pos 
+        cout << "Retirou animal posicao " << pos << endl;
+        //delete Animais[pos]; // delete o animal da pos 
         Animais.erase(Animais.begin() + pos); // metodo erase Remove do vetor um único elemento (posição) ou um intervalo de elementos ([primeiro, último)).
         // metodo begin Retorna um iterador apontando para o primeiro elemento no vetor. 
         // basicamente o erase tem como paramentros o begin() + posicao q quero tirar
-
-}
+    }
 }
 int Fazenda::getN_Animais(){
     return Animais.size(); // metodo size() que retorna o tamanho do vector
@@ -60,16 +60,16 @@ float Fazenda::calculaPrecoTotal(){
     float total = 0;
     for (Animal * animal : Animais){
         total += animal->preco(); // bem basico percorrre o vector e vai somando 
-}       // -> pois aqui estamos falando de ponteiros 
+    }       // -> pois aqui estamos falando de ponteiros 
     return total;
 }
 
 float Fazenda::calculaPrecoAnimal(int pos){
     if(pos >= 0 && pos < Animais.size()){
         return Animais[pos]->preco(); // retorna o preco do animal na posição desejado
-}else {
-    return 0;
-}
+    }else {
+        return 0;
+    }
 }
 
 
@@ -102,38 +102,38 @@ int Fazenda::NumPorco(){
         int contador = 0;
         for(Animal * animal : Animais){
             if(dynamic_cast<Porco*>(animal) != nullptr){ // dymanic_cast é um operador de conversão dinamica, 
-            //basicamente neste exemplo ele tenta converter um ponteiro de animal em algum animal especifico
-            //neste exemplo é o porco, então se ele conseguir a converção, ou seja, o resultado será um ponteiro válido para porco
-            //caso ele não conseguia a converção ele da nullptr. Q OPERADOR MASSA
-            contador++;
-        }
+                //basicamente neste exemplo ele tenta converter um ponteiro de animal em algum animal especifico
+                //neste exemplo é o porco, então se ele conseguir a converção, ou seja, o resultado será um ponteiro válido para porco
+                //caso ele não conseguia a converção ele da nullptr. Q OPERADOR MASSA
+                contador++;
+            }
         }
         return contador;
 }
 int Fazenda::NumBoi(){
-            int contador = 0;
+        int contador = 0;
         for(Animal * animal : Animais){
             if(dynamic_cast<Boi*>(animal) != nullptr){
-            contador++;
-        }
+                contador++;
+            }
         }
         return contador;
 }
 int Fazenda::NumPato(){
-            int contador = 0;
+        int contador = 0;
         for(Animal * animal : Animais){
             if(dynamic_cast<Pato*>(animal) != nullptr){
-            contador++;
-        }
+                contador++;
+            }
         }
         return contador;
 }
 int Fazenda::NumGalinha(){
-            int contador = 0;
+        int contador = 0;
         for(Animal * animal : Animais){
             if(dynamic_cast<Galinha*>(animal) != nullptr){
-            contador++;
-        }
+                contador++;
+            }
         }
         return contador;
 }

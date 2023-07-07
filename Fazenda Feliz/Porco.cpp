@@ -11,6 +11,8 @@ Porco::Porco(int idade, const string &sexo, float peso)
     cout << "Porco disse: oinc oinc, iiihhh" << endl;
 }
 /*virtual*/ void Porco::comer(){
+    cout << "Porco alimentou-se" << endl;
+
     peso_porco += 2;
     setPeso(peso_porco);
     if (peso_porco > 120){
@@ -19,6 +21,7 @@ Porco::Porco(int idade, const string &sexo, float peso)
     }
 }
 /*virtual*/ void Porco::mover(){
+    cout << "Porco moveu-se" << endl;
     peso_porco -= peso_porco*0.003;
     setPeso(peso_porco);
 }
@@ -29,7 +32,7 @@ Porco::Porco(int idade, const string &sexo, float peso)
     cout << "*********************************" << endl;
     cout << "Tipo de animal: Porco" << endl;
     Animal::imprimir();
-    cout << "Preco da carne: " << preco() << endl;
+    cout << "Preco da carne: R$ " << preco() << endl;
     cout << "*********************************" << endl;
 }
 

@@ -12,6 +12,7 @@ Boi::Boi(int idade, const string &sexo, float peso)
     cout << "Boi disse: muuuu" << endl; // metodo de som do boi
 } 
 /*virtual*/ void Boi::comer(){ // metodo comer do boi
+    cout << "Boi alimentou-se" << endl;
     peso_boi += 5;
     setPeso(peso_boi);
     if (peso_boi > 600){ // verifica se o peso for > que 600 vai ser travado/ limitado em 600 kg
@@ -20,6 +21,7 @@ Boi::Boi(int idade, const string &sexo, float peso)
     }
 }
 /*virtual*/ void Boi::mover(){
+    cout << "Boi moveu-se" << endl;
     peso_boi -= peso_boi * 0.004; // boi anda vai queimar 0.004 kg do peso atual
     setPeso(peso_boi);
 }
@@ -30,7 +32,7 @@ Boi::Boi(int idade, const string &sexo, float peso)
     cout << "*********************************" << endl;
     cout << "Tipo de animal: Boi" << endl; // sobreeescreveu o metodo imprimir para o Boi 
     Animal::imprimir(); // utilizado o imprimir de animal pois é padrão
-    cout << "Preco da carne: " << preco() << endl;
+    cout << "Preco da carne: R$ " << preco() << endl;
     cout << "*********************************" << endl;
 }
 /*static*/ int Boi::getNumBoi(){

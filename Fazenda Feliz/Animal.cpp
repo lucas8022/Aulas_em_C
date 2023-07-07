@@ -38,8 +38,8 @@ float Animal::getPeso() const{
 }
 
 /*virtual*/ void Animal::imprimir() const{
-    cout << "Idade: " << idade << endl;
+    cout << "Idade: " << idade << " anos"<< endl;
     cout << "Sexo: " << sexo << endl;
-    cout << "Peso: " << peso << endl;
+    cout << "Peso: " << peso << " kg" << endl;
 } // criei que vai ser utilizado para diminuir codigo no futuro
 

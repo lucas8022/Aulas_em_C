@@ -11,6 +11,7 @@ Pato::Pato(int idade, const string &sexo, float peso)
     cout << "Pato disse: quá quá" << endl;
 } 
 /*virtual*/ void Pato::comer(){
+    cout << "Pato alimentou-se" << endl;
     peso_pato += 0.5;
     setPeso(peso_pato);
     if (peso_pato > 4.5){
@@ -19,6 +20,7 @@ Pato::Pato(int idade, const string &sexo, float peso)
     }
 }
 /*virtual*/ void Pato::mover(){
+    cout << "Pato moveu-se" << endl; 
     peso_pato -= peso_pato * 0.002;
     setPeso(peso_pato);
 }
@@ -29,7 +31,7 @@ Pato::Pato(int idade, const string &sexo, float peso)
     cout << "*********************************" << endl;
     cout << "Tipo de animal: Pato" << endl;
     Animal::imprimir();
-    cout << "Preco da carne: " << preco() << endl;
+    cout << "Preco da carne: R$ " << preco() << endl;
     cout << "*********************************" << endl;
 }
 

@@ -3,7 +3,7 @@
 
 #include "Animal.hpp"
 
-class Boi : public Animal{ // class boi herda de animal
+class Boi : public Animal{ 
     public:
     
     Boi(int idade, const string &sexo, float peso); // construtor

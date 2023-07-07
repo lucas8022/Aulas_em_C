@@ -40,8 +40,8 @@ class Fazenda {
     float calculaPrecoAnimal(int pos); // calcula o preco de uma certa posição
 
     int NumPorco();
-    int NumBoi(); // aqui retorna a quantidade de cada animal especifico 
-    int NumPato(); // antigamente retornava o atributo static de cada função, mas agora 
+    int NumBoi(); 
+    int NumPato(); // antes retornava o atributo static de cada função, mas agora 
     int NumGalinha(); // usa o operador dynamic_cast 
 
     void imprimir(); // imprimi 

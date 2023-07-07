@@ -37,9 +37,7 @@ int main(){
     fazenda.AddAnimal(&G2);
     fazenda.AddAnimal(&G3);
 
-
-    
-    fazenda.imprimir(); // imprimi para mostrar as informações 
+    //fazenda.imprimir(); // imprimi para mostrar as informações 
 /*
     P1.som();
     P1.mover();
@@ -50,16 +48,18 @@ int main(){
     P1.imprimir();
 */
     //cout << "Preço do kg da Porco: R$ " << P1.getPreco_Kg() << endl;
+    //P1.setPreco_Kg(60);
+    //cout << "Preço do kg da Porco: R$ " << P1.getPreco_Kg() << endl;
 
     //cout << "Preco total dos animais da fazenda: R$ " << fazenda.calculaPrecoTotal() << endl;
 
     //cout << "Preco do animal 3: R$ " << fazenda.calculaPrecoAnimal(3) << endl;
 
-    // imprimi o valor total dos animais na fazenda e tbm de uma posição especifica
+    //imprimi o valor total dos animais na fazenda e tbm de uma posição especifica
 
-    fazenda.RemoveAnimal(4); // remove a posição 4
+    //fazenda.RemoveAnimal(4); // remove a posição 4
 
-    fazenda.imprimir(); // apos remover imprimi de novo mostrando as alterações
+    //fazenda.imprimir(); // apos remover imprimi de novo mostrando as alterações
 
     return 0;
 }

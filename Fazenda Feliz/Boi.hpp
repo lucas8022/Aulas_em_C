@@ -8,8 +8,8 @@ class Boi : public Animal{
     
     Boi(int idade, const string &sexo, float peso); // construtor
 
-    void setPreco_Kg(float kg); // set e get preco do kg caso queria mudar
-    float getPreco_Kg();
+    static void setPreco_Kg(float kg); // set e get preco do kg caso queria mudar
+    static float getPreco_Kg();
     virtual void som() const ; 
     virtual void comer() ; // aqui vamos sobreescrever esses metodos
     virtual void mover() ;
@@ -21,7 +21,7 @@ class Boi : public Animal{
     private:
     float peso_boi = getPeso(); 
     static int numBoi; 
-    float preco_kg = 40; // peso já estabelecido
+    static float preco_kg; // peso já estabelecido
 
     //~Boi();
 };

@@ -1,6 +1,7 @@
 #include "Porco.hpp"
 
 int Porco::numPorco = 0;
+float Porco::preco_kg = 40;
 
 Porco::Porco(int idade, const string &sexo, float peso)
 : Animal(idade, sexo, peso)

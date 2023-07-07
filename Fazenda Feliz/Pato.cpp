@@ -1,6 +1,7 @@
 #include "Pato.hpp"
 
 int Pato::numPato = 0;
+float Pato::preco_kg = 40;
 
 Pato::Pato(int idade, const string &sexo, float peso)
 : Animal(idade, sexo, peso)

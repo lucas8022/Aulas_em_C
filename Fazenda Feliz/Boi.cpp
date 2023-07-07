@@ -1,6 +1,7 @@
 #include "Boi.hpp"
 
 int Boi::numBoi = 0;
+float Boi::preco_kg = 40;
 
 
 Boi::Boi(int idade, const string &sexo, float peso)

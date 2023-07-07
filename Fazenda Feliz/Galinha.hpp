@@ -7,8 +7,8 @@ class Galinha : public Animal{
     public:
     
     Galinha(int idade, const string &sexo, float peso);
-    void setPreco_Kg(float kg);
-    float getPreco_Kg();
+    static void setPreco_Kg(float kg);
+    static float getPreco_Kg();
     virtual void som() const; 
     virtual void comer();
     virtual void mover();
@@ -20,7 +20,7 @@ class Galinha : public Animal{
     private:
     float peso_galinha = getPeso();
     static int numGalinha;
-    float preco_kg = 20;
+    static float preco_kg;
 
     //~Galinha();
 };

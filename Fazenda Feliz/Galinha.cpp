@@ -1,6 +1,7 @@
 #include "Galinha.hpp"
 
 int Galinha::numGalinha = 0;
+float Galinha::preco_kg = 20;
 
 Galinha::Galinha(int idade, const string &sexo, float peso)
 : Animal(idade, sexo, peso)
